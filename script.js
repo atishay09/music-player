@@ -9,10 +9,20 @@ const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 const mainContainer = document.getElementById("main-container");
 const modeBtn = document.getElementById("change-mode");
+const darkMode = document.getElementById("mode2");
+const lightMode =document.getElementById("mode1");
 
 //for switching dark and lihgt mode
 modeBtn.addEventListener("click", () => {
     mainContainer.classList.toggle("dark");
+    if(lightMode.classList.contains("inactive-mode")){
+        lightMode.classList.remove("inactive-mode");
+        darkMode.classList.add("inactive-mode");
+    }
+    else{
+        lightMode.classList.add("inactive-mode");
+        darkMode.classList.remove("inactive-mode");
+    }
 });
 
 //song titles
