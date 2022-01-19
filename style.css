@@ -155,6 +155,10 @@
             padding: 3px;
             
         }
+        
+        .inactive-mode{
+            display: none;
+        }
 
         .main-container.dark {
             background-image: linear-gradient(0deg,
