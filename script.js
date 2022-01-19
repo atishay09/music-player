@@ -7,14 +7,22 @@ const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-cont");
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
+const mainContainer = document.getElementById("main-container");
+const modeBtn = document.getElementById("change-mode");
+
+//for switching dark and lihgt mode
+modeBtn.addEventListener("click", () => {
+    mainContainer.classList.toggle("dark");
+});
+
 //song titles
-const songs = ["mario", "pal", "morni"];
+const songs = ["Ik Vaari Aa", "Pal-Whistle", "Raabta(Title Track)", "Nasheeli Aankhein", "Khamosiyan", "Saaware", "Pal Ek Pal"];
 let songIndex = 0;
 //function to load the song
 loadSong(songs[songIndex]);
 function loadSong(song) {
     title.innerText = song;
-    audio.src = `./${song}.mp3`;
+    audio.src = `./music/${song}.mp3`;
 }
 //function to play song 
 function playSong() {
